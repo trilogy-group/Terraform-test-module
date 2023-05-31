@@ -14,13 +14,13 @@ resource "aws_instance" "app-server" {
   }
    root_block_device {
     volume_type           = "gp2"
-    volume_size           = "1"
+    volume_size           = "8"
     delete_on_termination = true
   }
     ebs_block_device {
     device_name           = "xvda"
     volume_type           = "gp2"
-    volume_size           = "1"
+    volume_size           = "8"
     delete_on_termination = false
   }
 }
