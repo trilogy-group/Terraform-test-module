@@ -19,7 +19,7 @@ resource "aws_instance" "app-server" {
   }
     ebs_block_device {
     device_name           = "xvda"
-    volume_type           = "gp2"
+    volume_type           = "var.ebs_device_type"
     volume_size           = "8"
     delete_on_termination = false
   }
